@@ -267,7 +267,7 @@ namespace FinalProject.Classes
             foreach (BaseClass coin in coinlist)
             {
                 coin.position.X -= speed;
-                Canvas.SetLeft(coin.image, coin.position.X);
+                Canvas.SetLeft(coin.image, coin.position.X); //test git
                 Canvas.SetTop(coin.image, coin.position.Y);
 
                 if (coin.position.X + coin.size.Width < 0)

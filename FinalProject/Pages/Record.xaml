@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="FinalProject.Pages.Record"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FinalProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" Opacity="0.9" ImageSource="/assets/backgrounds/RecordsBg.jpeg"/>
+            <!--הרקע של הקנבאס-->
+        </Grid.Background>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <Viewbox Grid.Column="1">
+            
+        </Viewbox>
+
+        <Rectangle Grid.Row="1" Grid.Column="" Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <Rectangle.Fill>
+                <ImageBrush Stretch="Fill" Opacity="0.9" ImageSource="/assets/Icons/trophy.png"></ImageBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Viewbox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5">
+            <TextBlock  x:Name="BestScore" Text="BestScore:" FontFamily="Edwardian Script ITC" FontSize="30px" Foreground="DarkRed" TextAlignment="Left" Height="50" Width="245" ></TextBlock>
+        </Viewbox>
+
+        <!--תפריט עליון-->
+        <Viewbox Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="0">
+
+            <TextBlock Foreground="Black" FontFamily="david" FontSize="5px" Height="14" Width="100" >
+                <Hyperlink FontFamily="david" Foreground="Black" Click="HomeButton_Click">
+                    HOME
+                </Hyperlink>
+                <Hyperlink FontFamily="david" Foreground="Black" Click="SettingsButton_Click">
+                    SETTINGS
+                </Hyperlink>                
+                <Hyperlink FontFamily="david" Foreground="Black"  Click="StoreButton_Click">
+                    STORE
+                </Hyperlink>                
+                <Hyperlink FontFamily="david" Foreground="Black"  Click="HelpButton_Click">
+                    HELP
+                </Hyperlink>                
+                <Hyperlink FontFamily="david" Foreground="Black"  Click="LoginButton_Click">
+                    LOGIN
+                </Hyperlink>
+            </TextBlock>
+        </Viewbox>
+        
+    </Grid>
+   
+</Page>

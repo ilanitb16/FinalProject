@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="FinalProject.Pages.HelpPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FinalProject.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Maroon">
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="../assets/backgrounds/HelpBg.jpg"/>
+            <!--הרקע של הקנבאס-->
+        </Grid.Background>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Viewbox Grid.Row="6" Grid.Column="0">
+            <Button x:ConnectionId='2' x:Name="BackButton" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                    Content="BACK" FontSize="50"                         >
+            </Button>
+        </Viewbox>
+
+        <Viewbox  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="4" Stretch="Fill">
+            <Border Background="black" Opacity="0.7">
+                <TextBlock Width="{Binding Path=ActualWidth, ElementName=border}" 
+                   TextWrapping="Wrap" TextTrimming="None" VerticalAlignment="Top" Foreground="white" FontStyle="Italic" TextAlignment="Right" Text="At the beginning of the game the player can pick the character he wants to play with out of two different options.
+                           The game begins as the player moves on the obstacle course where he will have to jump and run from place to place to avoid the obstacles in front of him. 
+                           The player starts with three hearts that will be displayed at any moment on the side of the screen.
+                           The hearts represent the life count of the player. Each hit on the obstacle will remove one heart out of the three with which the player started. When the hearts run out, the game is over and the player is disqualified.
+                            At the end of the stage, the player will receive virtual money with which he can purchase new backgrounds and characters. The field of the game will contain coins, hearts and gifts that will earn score for the player. The score will appear on the top of the screen.
+ " RequestedTheme="Dark" Visibility="Visible" Height="3232" SelectionHighlightColor="#FF9B99DD" HorizontalAlignment="Center" FontWeight="Bold"/>
+            </Border>
+           
+
+        </Viewbox>
+
+
+
+    </Grid>
+</Page>
+

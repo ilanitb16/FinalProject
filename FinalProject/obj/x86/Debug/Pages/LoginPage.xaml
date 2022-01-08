@@ -1,0 +1,105 @@
+﻿<Page
+    x:Class="FinalProject.Pages.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FinalProject.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#9E9E9E">
+    
+    
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Rectangle RadiusX="50" RadiusY="50" Grid.ColumnSpan="2" Grid.RowSpan="4" Grid.Row="1" Grid.Column="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="../assets/Login-Page.png" Stretch="Fill" />
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Viewbox Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="1">
+            <TextBox TextAlignment="left" PlaceholderText="Username" FontFamily="Edwardian Script ITC" Width="150" >
+            </TextBox>
+        </Viewbox>
+
+        <Viewbox Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="1" >
+            <PasswordBox PlaceholderText="Password"  HorizontalContentAlignment="Center" FontFamily="Edwardian Script ITC" Width="150">
+            </PasswordBox>
+        </Viewbox>
+
+        <!--<Viewbox Grid.Row="5" Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="1" >
+            <TextBlock FontFamily="David" Foreground="Black" VerticalAlignment="Bottom" TextWrapping="Wrap" FontSize="8" Height="11" Width="104">Don't have an account?</TextBlock>
+
+        </Viewbox>-->
+
+        <Viewbox Grid.Row="5" Grid.ColumnSpan="1" Grid.RowSpan="1" Grid.Column="2">
+            <TextBlock Foreground="Black" FontFamily="david" FontSize="6px" Height="14" Width="86" Text="Don't have an account?" >
+                <Hyperlink x:ConnectionId='7' FontFamily="david" Foreground="Black" NavigateUri="RegisterPage"                              >
+                    SIGN UP.
+                </Hyperlink>
+            </TextBlock>
+        </Viewbox>
+        
+            <!--לחצן סאבמיט ששולח את הנתונים--> 
+        <Viewbox Grid.Column="1" Grid.Row="5">
+            <Button HorizontalAlignment="Left" BorderBrush="#21798d" BorderThickness="0" VerticalAlignment="Top" Width="141" Height="44">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <ImageBrush ImageSource="../assets/Submit.png" Stretch="Fill" />
+                </Button.Background>
+                <!--<Button.Content>
+                    <ImageBrush ImageSource="../assets/Submit.png" Stretch="Fill" />
+                </Button.Content>-->
+            </Button>
+        </Viewbox>
+
+        <!--<Rectangle>
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Gray" Opacity="0.2" />
+            </Rectangle.Fill>
+        </Rectangle>-->
+        
+        <!--תפריט עליון-->
+        <Viewbox Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1" Grid.Column="0">
+
+            <TextBlock Foreground="Black" FontFamily="david" FontSize="5px" Height="14" Width="100" >
+                <Hyperlink x:ConnectionId='2' FontFamily="david" Foreground="Black" NavigateUri="RegisterPage"                         >
+                    HOME
+                </Hyperlink>
+                <Hyperlink x:ConnectionId='3' FontFamily="david" Foreground="Black" NavigateUri="RegisterPage"                             >
+                    SETTINGS
+                </Hyperlink>                
+                <Hyperlink x:ConnectionId='4' FontFamily="david" Foreground="Black" NavigateUri="RegisterPage"                          >
+                    STORE
+                </Hyperlink>                
+                <Hyperlink x:ConnectionId='5' FontFamily="david" Foreground="Black" NavigateUri="RegisterPage"                         >
+                    HELP
+                </Hyperlink>                
+                <Hyperlink x:ConnectionId='6' FontFamily="david" Foreground="Black" NavigateUri="RegisterPage"                          >
+                    LOGIN
+                </Hyperlink>
+            </TextBlock>
+        </Viewbox>
+    </Grid>
+</Page>
+

@@ -5,10 +5,16 @@
     xmlns:local="using:FinalProject.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
+    mc:Ignorable="d" Loaded="Page_Loaded"
     Background="#68C5FF">
 
+
     <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="../assets/backgrounds/HelpBg.jpg"/>
+            <!--הרקע של הקנבאס-->
+        </Grid.Background>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -22,26 +28,30 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Viewbox Grid.Column="1" Grid.ColumnSpan="2">
-            <TextBlock FontFamily="Edwardian Script ITC" Text="Digital Store:">
-                
+        <Viewbox Grid.Column="0" Grid.ColumnSpan="1">
+            <TextBlock x:Name="coinTitle" FontFamily="Edwardian Script ITC" Text="Coins:">
             </TextBlock>
         </Viewbox>
 
-        <Viewbox Grid.Row="4" Grid.Column="0">
-            <Button x:Name="BackButton" VerticalAlignment="Stretch" FontFamily="Edwardian Script ITC" HorizontalAlignment="Stretch"
+        <Viewbox Grid.Column="1" Grid.ColumnSpan="2">
+            <TextBlock FontFamily="Edwardian Script ITC" Text="Digital Store:">
+            </TextBlock>
+        </Viewbox>
+
+        <Viewbox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2">
+            <Button x:Name="BackButton" CornerRadius="100" VerticalAlignment="Stretch" FontFamily="Edwardian Script ITC" HorizontalAlignment="Stretch"
                     Content="Back" FontSize="50" Click="BackButton_Click">
             </Button>
         </Viewbox>
         <Viewbox  Grid.Row="1" Grid.Column="0">
             <TextBlock Text="Select Avatar:" FontFamily="Edwardian Script ITC"></TextBlock>
-        </Viewbox>       
+        </Viewbox>
         <Viewbox  Grid.Row="2" Grid.Column="0">
             <TextBlock Text="Select Background:" FontFamily="Edwardian Script ITC"></TextBlock>
         </Viewbox>
         <Viewbox Grid.Column="3" Grid.Row="1">
             <Button x:Name="CatButton" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-                    FontSize="50" Width="100" Height="100" Click="CatButton_Click" BorderBrush="#21798d" BorderThickness="0" >
+                    FontSize="50" Width="100" Height="100" BorderBrush="#21798d" Click="Cat_buy_Click" BorderThickness="0" >
                 <Button.Background>
                     <ImageBrush ImageSource="..//Assets/Characters/Gifs/Cat/IdleCat.gif" Stretch="Fill" />
                 </Button.Background>
@@ -49,22 +59,25 @@
                     <Image Source="../Assets/Characters/Gifs/Cat/IdleCat.gif"  />
                 </Button.Content>
             </Button>
-        </Viewbox>        
-        
+        </Viewbox>
+        <Button Name="Cat_buy" Grid.Column="3" Grid.Row="1" CornerRadius="100" FontFamily="Edwardian Script ITC" FontSize="50" Click="Cat_buy_Click" Content="200" HorizontalAlignment="Stretch" Grid.RowSpan="2" Margin="282,0,0,0"/>
+
         <Viewbox Grid.Column="2" Grid.Row="1">
             <Button x:Name="DogButton" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-                    FontSize="50" Width="100" Height="100" Click="DogButton_Click" BorderBrush="#21798d" BorderThickness="0" >
+                    FontSize="50" Width="100" Height="100" Click="dog_buy_Click" BorderBrush="#21798d" BorderThickness="0" >
                 <Button.Background>
                     <ImageBrush ImageSource="..//Assets/Characters/Gifs/Dog/DogIdle.gif" Stretch="Fill" />
                 </Button.Background>
                 <Button.Content>
-                    <Image Source="../Assets/Characters/Gifs/Dog/DogIdle.gif" />
+                    <Image Source="../Assets/Characters/Gifs/Dog/DogIdle.gif" Height="74" Margin="0,0,0,-1" VerticalAlignment="Bottom" />
                 </Button.Content>
             </Button>
         </Viewbox>
+        <Button Name="dog_buy" Grid.Column="2" Grid.Row="1" CornerRadius="100" FontFamily="Edwardian Script ITC" FontSize="50" Click="dog_buy_Click" Content="250" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.RowSpan="2">
+        </Button>
         <Viewbox Grid.Column="1" Grid.Row="1">
             <Button x:Name="DinoButton" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-                    FontSize="50" Width="100" Height="100" Click="DinoButton_Click" BorderBrush="#21798d" BorderThickness="0" >
+                    FontSize="50" Width="100" Height="100" Click="dino_buy_Click" BorderBrush="#21798d" BorderThickness="0" >
                 <Button.Background>
                     <ImageBrush ImageSource="..//assets/Characters/Gifs/Dinosaur/DinoIdle.gif" Stretch="Fill" />
                 </Button.Background>
@@ -73,6 +86,8 @@
                 </Button.Content>
             </Button>
         </Viewbox>
+        <Button Name="dino_buy" Grid.Column="1" Grid.Row="1"  CornerRadius="100" FontFamily="Edwardian Script ITC" FontSize="50" Click="dino_buy_Click"  Content="use" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.RowSpan="2">
+        </Button>
 
         <Viewbox Grid.Column="3" Grid.Row="2">
             <Button x:Name="bg3Button" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
@@ -85,6 +100,8 @@
                 </Button.Content>
             </Button>
         </Viewbox>
+        <Button Name="backgound3_buy" Grid.Column="3" Grid.Row="2" CornerRadius="100" FontFamily="Edwardian Script ITC" FontSize="50" Click="backgound3_buy_Click" Content="400" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.RowSpan="2" Margin="0,0,0,226">
+        </Button>
 
         <Viewbox Grid.Column="2" Grid.Row="2">
             <Button x:Name="bg2Button" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
@@ -97,6 +114,9 @@
                 </Button.Content>
             </Button>
         </Viewbox>
+        <Button Name="backgound2_buy" Grid.Column="2" Grid.Row="2" FontFamily="Edwardian Script ITC" FontSize="50" Click="bg2Button_Click"  CornerRadius="100" Content="300" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.RowSpan="2">
+        </Button>
+
         <Viewbox Grid.Column="1" Grid.Row="2">
             <Button x:Name="bg1Button" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
                     FontSize="50" Width="100" Height="100" Click="bg1Button_Click" BorderBrush="#21798d" BorderThickness="0" >
@@ -108,5 +128,8 @@
                 </Button.Content>
             </Button>
         </Viewbox>
+        <Button Name="backgound1_buy" Grid.Column="1" Grid.Row="2" FontFamily="Edwardian Script ITC" FontSize="50" Click="backgound1_buy_Click" CornerRadius="100"  Content="use" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.RowSpan="2">
+        </Button>
+
     </Grid>
 </Page>

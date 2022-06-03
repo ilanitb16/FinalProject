@@ -5,7 +5,7 @@
     xmlns:local="using:FinalProject.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
+    mc:Ignorable="d" 
     Background="Maroon">
     <Grid>
 
@@ -13,8 +13,10 @@
             <ImageBrush Stretch="Fill" ImageSource="../assets/backgrounds/HelpBg.jpg"/>
             <!--הרקע של הקנבאס-->
         </Grid.Background>
-        
+
         <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -28,30 +30,95 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Viewbox Grid.Row="6" Grid.Column="0">
-            <Button x:ConnectionId='2' x:Name="BackButton" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-                    Content="BACK" FontSize="50"                         >
+        <Viewbox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
+            <Button x:ConnectionId='2' x:Name="BackButton" CornerRadius="100" VerticalAlignment="Stretch" FontFamily="Edwardian Script ITC" HorizontalAlignment="Stretch"
+                    Content="back" FontSize="50"                          Width="95">
             </Button>
         </Viewbox>
 
-        <Viewbox  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="4" Stretch="Fill">
-            <Border Background="black" Opacity="0.7">
-                <TextBlock Width="{Binding Path=ActualWidth, ElementName=border}" 
-                   TextWrapping="Wrap" TextTrimming="None" VerticalAlignment="Top" Foreground="white" FontStyle="Italic" TextAlignment="Right" Text="At the beginning of the game the player can pick the character he wants to play with out of two different options.
-                           The game begins as the player moves on the obstacle course where he will have to jump and run from place to place to avoid the obstacles in front of him. 
-                           The player starts with three hearts that will be displayed at any moment on the side of the screen.
-                           The hearts represent the life count of the player. Each hit on the obstacle will remove one heart out of the three with which the player started. When the hearts run out, the game is over and the player is disqualified.
-                            At the end of the stage, the player will receive virtual money with which he can purchase new backgrounds and characters. The field of the game will contain coins, hearts and gifts that will earn score for the player. The score will appear on the top of the screen.
- " RequestedTheme="Dark" Visibility="Visible" Height="3232" SelectionHighlightColor="#FF9B99DD" HorizontalAlignment="Center" FontWeight="Bold"/>
-            </Border>
-           
+        <Rectangle RadiusX="50" RadiusY="50" Grid.ColumnSpan="5" Grid.RowSpan="4" Grid.Row="1" Grid.Column="1">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="../assets/HelpPageContent.png" Stretch="Fill" />
+            </Rectangle.Fill>
+        </Rectangle>
 
+            <!--<Viewbox  Grid.Row="1" Grid.Column="0">
+            <TextBlock Text="Select Avatar:" FontFamily="Edwardian Script ITC"></TextBlock>
+        </Viewbox>
+        <Viewbox  Grid.Row="2" Grid.Column="0">
+            <TextBlock Text="Select Background:" FontFamily="Edwardian Script ITC"></TextBlock>
+        </Viewbox>
+        <Viewbox Grid.Column="3" Grid.Row="1">
+            <Button x:Name="CatButton" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                    FontSize="50" Width="100" Height="100" Click="CatButton_Click" BorderBrush="#21798d" BorderThickness="0" >
+                <Button.Background>
+                    <ImageBrush ImageSource="..//Assets/Characters/Gifs/Cat/IdleCat.gif" Stretch="Fill" />
+                </Button.Background>
+                <Button.Content>
+                    <Image Source="../Assets/Characters/Gifs/Cat/IdleCat.gif"  />
+                </Button.Content>
+            </Button>
         </Viewbox>
 
+        <Viewbox Grid.Column="2" Grid.Row="1">
+            <Button x:Name="DogButton" IsEnabled="false" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                    FontSize="50" Width="100" Height="100" Click="DogButton_Click" BorderBrush="#21798d" BorderThickness="0" >
+                <Button.Background>
+                    <ImageBrush ImageSource="..//Assets/Characters/Gifs/Dog/DogIdle.gif" Stretch="Fill" />
+                </Button.Background>
+                <Button.Content>
+                    <Image Source="../Assets/Characters/Gifs/Dog/DogIdle.gif" />
+                </Button.Content>
+            </Button>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="1">
+            <Button x:Name="DinoButton" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                    FontSize="50" Width="100" Height="100" Click="DinoButton_Click" BorderBrush="#21798d" BorderThickness="0" >
+                <Button.Background>
+                    <ImageBrush ImageSource="..//assets/Characters/Gifs/Dinosaur/DinoIdle.gif" Stretch="Fill" />
+                </Button.Background>
+                <Button.Content>
+                    <Image Source="/Assets/Characters/Gifs/Dinosaur/DinoIdle.gif" />
+                </Button.Content>
+            </Button>
+        </Viewbox>
 
+        <Viewbox Grid.Column="3" Grid.Row="2">
+            <Button x:Name="bg3Button" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                    FontSize="50" Width="100" Height="100" Click="bg3Button_Click" BorderBrush="#21798d" BorderThickness="0" >
+                <Button.Background>
+                    <ImageBrush ImageSource="..//Assets/Backgrounds/bg3.jpg" Stretch="Fill" />
+                </Button.Background>
+                <Button.Content>
+                    <Image Source="../Assets/Backgrounds/bg3.jpg" />
+                </Button.Content>
+            </Button>
+        </Viewbox>
+
+        <Viewbox Grid.Column="2" Grid.Row="2">
+            <Button x:Name="bg2Button" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                    FontSize="50" Width="100" Height="100" Click="bg2Button_Click" BorderBrush="#21798d" BorderThickness="0" >
+                <Button.Background>
+                    <ImageBrush ImageSource="..//assets/Backrounds/snowbg.png" Stretch="Fill" />
+                </Button.Background>
+                <Button.Content>
+                    <Image Source="/Assets/Backgrounds/snowbg.png" />
+                </Button.Content>
+            </Button>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="2">
+            <Button x:Name="bg1Button" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                    FontSize="50" Width="100" Height="100" Click="bg1Button_Click" BorderBrush="#21798d" BorderThickness="0" >
+                <Button.Background>
+                    <ImageBrush ImageSource="..//assets/Backgrounds/bg2.jpg" Stretch="Fill" />
+                </Button.Background>
+                <Button.Content>
+                    <Image Source="/Assets/Backgrounds/bg2.jpg" />
+                </Button.Content>
+            </Button>
+        </Viewbox>-->
 
     </Grid>
 </Page>

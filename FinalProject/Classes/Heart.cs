@@ -12,7 +12,7 @@ namespace FinalProject.Classes
     {
         public Heart(double placeX, double placeY, Canvas arena) : base(placeX, placeY, arena, 100, 100)
         {
-            this.image.Source = new BitmapImage(new Uri("ms-appx:///Assets/Icons/heart.gif"));
+            this.image.Source = new BitmapImage(new Uri("ms-appx:///Assets/Icons/heart.gif")); // הקישור לתמונת הלב
         }
     }
 }

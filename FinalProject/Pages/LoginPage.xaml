@@ -27,6 +27,7 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
+        
         <Rectangle RadiusX="50" RadiusY="50" Grid.ColumnSpan="2" Grid.RowSpan="4" Grid.Row="1" Grid.Column="1">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="../assets/Login-Page.png" Stretch="Fill" />
@@ -34,12 +35,12 @@
         </Rectangle>
 
         <Viewbox Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="1">
-            <TextBox TextAlignment="left" PlaceholderText="Username" FontFamily="Edwardian Script ITC" Width="150" >
+            <TextBox Name="username" TextAlignment="left" PlaceholderText="Username" FontFamily="Edwardian Script ITC" Width="150" >
             </TextBox>
         </Viewbox>
 
         <Viewbox Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="1" >
-            <PasswordBox PlaceholderText="Password"  HorizontalContentAlignment="Center" FontFamily="Edwardian Script ITC" Width="150">
+            <PasswordBox Name="password"  PlaceholderText="Password"  HorizontalContentAlignment="Center" FontFamily="Edwardian Script ITC" Width="150">
             </PasswordBox>
         </Viewbox>
 
@@ -56,9 +57,14 @@
             </TextBlock>
         </Viewbox>
         
+        <Viewbox Grid.Row="5" Grid.ColumnSpan="1" Grid.RowSpan="1" Grid.Column="3">
+            <Button x:Name="ForgetPasswordButton" Foreground="Black" FontFamily="david" FontSize="6px" Click="ForgetPasswordButton_Click" Content="Forgot Password? CLICK HERE." >
+            </Button>
+        </Viewbox>
+        
             <!--לחצן סאבמיט ששולח את הנתונים--> 
         <Viewbox Grid.Column="1" Grid.Row="5">
-            <Button HorizontalAlignment="Left" BorderBrush="#21798d" BorderThickness="0" VerticalAlignment="Top" Width="141" Height="44">
+            <Button x:Name="submit" HorizontalAlignment="Left" BorderBrush="#21798d" BorderThickness="0" VerticalAlignment="Top" Width="141" Height="44" Click="submit_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="20"/>

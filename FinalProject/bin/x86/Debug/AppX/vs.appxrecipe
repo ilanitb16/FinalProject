@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>D85E7B410541079D9FEF999467DAE1573809484B037EF54005661A39FE2E41E4</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>E7E5568CF5A9FC8A2BE4F45381FC2C1C5F8B565FF6CA9DE7B50B7FF9EC632CCD</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>07e8bf18-eb36-4d8c-b2be-59a73067f047_1.0.0.0_x86__25yw9xqqqnxyc</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>07e8bf18-eb36-4d8c-b2be-59a73067f047_25yw9xqqqnxyc!App</RegisteredUserModeAppID>
     <RegisteredPackageID>07e8bf18-eb36-4d8c-b2be-59a73067f047</RegisteredPackageID>
@@ -30,17 +30,45 @@
     <AppXManifest Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-02T11:25:49.063</Modified>
+      <Modified>2022-06-03T13:09:23.837</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\bin\x86\Debug\FinalProject.exe">
       <PackagePath>entrypoint\FinalProject.exe</PackagePath>
-      <Modified>2022-01-02T11:25:48.555</Modified>
+      <Modified>2022-06-03T13:09:23.048</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\.nuget\packages\microsoft.data.sqlite.core\6.0.1\lib\netstandard2.0\Microsoft.Data.Sqlite.dll">
+      <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
+      <Modified>2021-11-17T23:22:52.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2021-02-04T22:15:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\.nuget\packages\sqlitepclraw.bundle_e_sqlite3\2.0.6\lib\netstandard2.0\SQLitePCLRaw.batteries_v2.dll">
+      <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
+      <Modified>2021-09-03T18:04:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\.nuget\packages\sqlitepclraw.core\2.0.6\lib\netstandard2.0\SQLitePCLRaw.core.dll">
+      <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
+      <Modified>2021-09-03T18:04:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.0.6\runtimes\win10-x86\nativeassets\uap10.0\e_sqlite3.dll">
+      <PackagePath>e_sqlite3.dll</PackagePath>
+      <Modified>2021-09-03T18:02:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\.nuget\packages\sqlitepclraw.provider.e_sqlite3\2.0.6\lib\uap10.0\SQLitePCLRaw.provider.e_sqlite3.dll">
+      <PackagePath>SQLitePCLRaw.provider.e_sqlite3.dll</PackagePath>
+      <Modified>2021-09-03T18:04:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\.nuget\packages\system.runtime.compilerservices.unsafe\4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+      <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
+      <Modified>2018-09-18T19:38:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\DataBaseProject\bin\x86\Debug\DataBaseProject.dll">
+      <PackagePath>DataBaseProject.dll</PackagePath>
+      <Modified>2022-05-17T13:10:35.614</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -69,6 +97,18 @@
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Characters\Gifs\Cat\WalkingCat.gif">
       <PackagePath>Assets\Characters\Gifs\Cat\WalkingCat.gif</PackagePath>
       <Modified>2021-11-16T19:21:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Characters\Gifs\Dog\Dead.gif">
+      <PackagePath>Assets\Characters\Gifs\Dog\Dead.gif</PackagePath>
+      <Modified>2021-12-29T08:58:46.225</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Characters\Gifs\Dog\Jump.gif">
+      <PackagePath>Assets\Characters\Gifs\Dog\Jump.gif</PackagePath>
+      <Modified>2021-12-29T09:10:14.843</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Characters\Gifs\Dog\Run.gif">
+      <PackagePath>Assets\Characters\Gifs\Dog\Run.gif</PackagePath>
+      <Modified>2021-12-29T09:41:59.378</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Icons\Coin.gif">
       <PackagePath>Assets\Icons\Coin.gif</PackagePath>
@@ -146,9 +186,9 @@
       <PackagePath>Assets\Backgrounds\OptionsBg.jpg</PackagePath>
       <Modified>2021-11-11T15:12:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Backgrounds\RecordsBg.jpeg">
-      <PackagePath>Assets\Backgrounds\RecordsBg.jpeg</PackagePath>
-      <Modified>2021-11-08T18:56:54.000</Modified>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Backgrounds\Records.png">
+      <PackagePath>Assets\Backgrounds\Records.png</PackagePath>
+      <Modified>2022-03-23T10:21:20.306</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Backgrounds\snow.png">
       <PackagePath>Assets\Backgrounds\snow.png</PackagePath>
@@ -158,9 +198,28 @@
       <PackagePath>Assets\Backgrounds\snowbg.png</PackagePath>
       <Modified>2022-01-01T18:50:05.012</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Characters\Gifs\Dinosaur\dino.png">
-      <PackagePath>Assets\Characters\Gifs\Dinosaur\dino.png</PackagePath>
-      <Modified>2021-12-25T18:09:56.728</Modified>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Characters\Gifs\Dinosaur\dino-new.scale-400.png">
+      <PackagePath>Assets\Characters\Gifs\Dinosaur\dino-new.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-30T18:02:24.277</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Characters\Gifs\Dinosaur\dino.scale-150.png">
+      <PackagePath>Assets\Characters\Gifs\Dinosaur\dino.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-30T17:56:02.325</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Characters\Gifs\Dinosaur\dino.scale-400.png">
+      <PackagePath>Assets\Characters\Gifs\Dinosaur\dino.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-30T17:56:02.325</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\HelpPageContent.png">
+      <PackagePath>Assets\HelpPageContent.png</PackagePath>
+      <Modified>2022-04-23T19:54:03.605</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Icons\ChangePassword.png">
+      <PackagePath>Assets\Icons\ChangePassword.png</PackagePath>
+      <Modified>2022-03-06T11:28:32.581</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Coin.png">
       <PackagePath>Assets\Coin.png</PackagePath>
@@ -177,6 +236,10 @@
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Icons\login.png">
       <PackagePath>Assets\Icons\login.png</PackagePath>
       <Modified>2021-11-03T18:28:29.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Icons\Logout.png">
+      <PackagePath>Assets\Icons\Logout.png</PackagePath>
+      <Modified>2022-03-27T08:48:04.198</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Icons\musicNote.png">
       <PackagePath>Assets\Icons\musicNote.png</PackagePath>
@@ -200,7 +263,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Icons\storeButton.png">
       <PackagePath>Assets\Icons\storeButton.png</PackagePath>
-      <Modified>2021-10-25T18:37:40.000</Modified>
+      <Modified>2022-03-27T08:50:28.115</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Icons\trophy.png">
       <PackagePath>Assets\Icons\trophy.png</PackagePath>
@@ -234,10 +297,6 @@
       <PackagePath>Assets\Obstacle\WhiteWall.png</PackagePath>
       <Modified>2021-12-25T19:24:49.685</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\PaintBrush.png">
-      <PackagePath>Assets\PaintBrush.png</PackagePath>
-      <Modified>2021-11-03T19:12:20.000</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\RegisterPage.png">
       <PackagePath>Assets\RegisterPage.png</PackagePath>
       <Modified>2021-11-08T16:59:58.000</Modified>
@@ -256,37 +315,39 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-09-13T15:48:31.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-09-13T15:48:31.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-09-13T15:48:31.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-09-13T15:48:31.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-09-13T15:48:31.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-09-13T15:48:31.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Backgrounds\RecordsBg.jpeg">
+      <PackagePath>Assets\Backgrounds\RecordsBg.jpeg</PackagePath>
+      <Modified>2021-11-08T18:56:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\kahoot.mp3">
       <PackagePath>Assets\kahoot.mp3</PackagePath>
       <Modified>2022-01-01T20:53:11.459</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\loser.m4a">
+      <PackagePath>Assets\loser.m4a</PackagePath>
+      <Modified>2022-05-17T16:39:58.561</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -294,43 +355,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\bin\x86\Debug\FinalProject.xr.xml">
       <PackagePath>FinalProject.xr.xml</PackagePath>
-      <Modified>2021-12-19T11:14:28.906</Modified>
+      <Modified>2022-06-03T13:09:22.897</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-01-02T11:25:48.461</Modified>
+      <Modified>2022-06-03T13:09:22.930</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-01-02T11:25:48.461</Modified>
+      <Modified>2022-06-03T13:09:22.930</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\bin\x86\Debug\Pages\GamePage.xbf">
       <PackagePath>Pages\GamePage.xbf</PackagePath>
-      <Modified>2022-01-02T11:25:48.461</Modified>
+      <Modified>2022-06-03T13:09:22.930</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\bin\x86\Debug\Pages\HelpPage.xbf">
       <PackagePath>Pages\HelpPage.xbf</PackagePath>
-      <Modified>2022-01-02T11:25:48.462</Modified>
+      <Modified>2022-06-03T13:09:22.930</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\bin\x86\Debug\Pages\LoginPage.xbf">
       <PackagePath>Pages\LoginPage.xbf</PackagePath>
-      <Modified>2022-01-02T11:25:48.462</Modified>
+      <Modified>2022-06-03T13:09:22.931</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\bin\x86\Debug\Pages\OptionsPage.xbf">
       <PackagePath>Pages\OptionsPage.xbf</PackagePath>
-      <Modified>2022-01-02T11:25:48.462</Modified>
+      <Modified>2022-06-03T13:09:22.931</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\bin\x86\Debug\Pages\Record.xbf">
       <PackagePath>Pages\Record.xbf</PackagePath>
-      <Modified>2022-01-02T11:25:48.462</Modified>
+      <Modified>2022-06-03T13:09:22.931</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\bin\x86\Debug\Pages\RegisterPage.xbf">
       <PackagePath>Pages\RegisterPage.xbf</PackagePath>
-      <Modified>2022-01-02T11:25:48.462</Modified>
+      <Modified>2022-06-03T13:09:22.931</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\bin\x86\Debug\Pages\StorePage.xbf">
       <PackagePath>Pages\StorePage.xbf</PackagePath>
-      <Modified>2022-01-02T11:25:48.462</Modified>
+      <Modified>2022-06-03T13:09:22.930</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -338,11 +399,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-01-01T20:55:16.727</Modified>
+      <Modified>2022-05-17T16:43:38.141</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\bin\x86\Debug\Core\FinalProject.exe">
       <PackagePath>FinalProject.exe</PackagePath>
-      <Modified>2022-01-02T11:25:49.060</Modified>
+      <Modified>2022-06-03T13:09:23.832</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

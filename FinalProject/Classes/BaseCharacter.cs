@@ -16,15 +16,18 @@ namespace FinalProject.Classes
         public StateType state { set; get; } //מצב הדמות 
 
         public BaseCharacter(double placeX, double placeY, Canvas arena,
-            double width, double height) : base(placeX,placeY,arena,width,height)
+            double width, double height) : base(placeX,placeY,arena,width,height) // יצירת דמות עם הנתונים שהיא צריכה
         {
-            this.acceleration = 0;
+            this.acceleration = 0; 
             this.speedY = 0;
-            this.state = StateType.runRight;
+            this.state = StateType.runRight; // מצב ברירת מחדל
             base.moveTimer.Tick += moveTimer_Tick;
 
         }
-        public void Jump()
+        /// <summary>
+        /// גורם לדמות לקפוץ
+        /// </summary>
+        public void Jump() // אחראי על תהליך הקפיצה
         {
             if ( this.state == StateType.runRight)
             {
@@ -34,7 +37,10 @@ namespace FinalProject.Classes
                 this.acceleration = 0.8;
             }
         }
-        internal void Rest()
+        /// <summary>
+          /// גורם לדמות לעמוד 
+          /// </summary>
+        internal void Rest() // אחראי על עמידה
         {
             if (this.state != StateType.jumpRight)
             {
@@ -43,19 +49,30 @@ namespace FinalProject.Classes
                 this.speedX = 0;
             }
         }
-        internal void Die()
+        /// <summary>
+        /// מצב הדמות בסוף משחק
+        /// </summary>
+        internal void Die() // מה שתמרחש כאשר המשחק נגמר 
         {
             this.state = StateType.dead;
             MatchGif();
-        }
-        private void moveTimer_Tick(object sender, object e) 
-        {
-            this.position.Y += this.speedY;
-            this.speedY += acceleration;
-            Canvas.SetTop(this.image, this.position.Y);
-            Canvas.SetLeft(this.image, this.position.X);
+            //this.position.Y = 0.705 * arena.ActualHeight;
+            //this.speedX = 0;
 
-            if (this.position.Y >= 0.705* arena.ActualHeight)
+        }
+        /// <summary>
+        /// תנועת הדמות
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void moveTimer_Tick(object sender, object e)  // טיימר שאחראי על תנועת הדמות
+        {
+            this.position.Y += this.speedY; // הוספת מהירות למיקום- יוצר את ההזזה של הדמות
+            this.speedY += acceleration;
+            Canvas.SetTop(this.image, this.position.Y); // מיקום הדמות במקום הנכון 
+            Canvas.SetLeft(this.image, this.position.X); // מיקום הדמות במקום הנכון
+
+            if (this.position.Y >= 0.705* arena.ActualHeight) // הגדרת "רצפה" כלומר הדמות לא יכולה לרדת מתחת לרף שהוגדר
             {
                 this.speedY = 0;
                 this.speedX = 0;
@@ -66,16 +83,16 @@ namespace FinalProject.Classes
                 MatchGif();
             }
         }
-
+        /// <summary>
+        /// התאמת הרקע של הדמות למצבה
+        /// </summary>
         public virtual void MatchGif()
         {
 
         }
-
-        public enum StateType
+        public enum StateType // המצבים האפשריים של הדמות
         {
              runRight, jumpRight, idle, dead
         }
     }
-
 }

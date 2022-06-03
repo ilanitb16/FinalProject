@@ -123,13 +123,12 @@
     <Compile Include="Classes\BaseCharacter.cs" />
     <Compile Include="Classes\BaseClass.cs" />
     <Compile Include="Classes\Coin.cs" />
-    <Compile Include="Classes\Dinosaur.cs" />
+    <Compile Include="Classes\Character.cs" />
     <Compile Include="Classes\GlobalData.cs" />
     <Compile Include="Classes\Heart.cs" />
     <Compile Include="Classes\Manager.cs" />
     <Compile Include="Classes\ObstacleShape.cs" />
     <Compile Include="Classes\OneShow.cs" />
-    <Compile Include="Classes\StateType.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -169,6 +168,7 @@
     <Content Include="Assets\Backgrounds\forest.jpg" />
     <Content Include="Assets\Backgrounds\HelpBg.jpg" />
     <Content Include="Assets\Backgrounds\OptionsBg.jpg" />
+    <Content Include="Assets\Backgrounds\Records.png" />
     <Content Include="Assets\Backgrounds\RecordsBg.jpeg" />
     <Content Include="Assets\Backgrounds\snow.png" />
     <Content Include="Assets\Backgrounds\snowbg.png" />
@@ -177,7 +177,14 @@
     <Content Include="Assets\Characters\Gifs\Cat\JumpingCat.gif" />
     <Content Include="Assets\Characters\Gifs\Cat\RunningCat.gif" />
     <Content Include="Assets\Characters\Gifs\Cat\WalkingCat.gif" />
-    <Content Include="Assets\Characters\Gifs\Dinosaur\dino.png" />
+    <Content Include="Assets\Characters\Gifs\Dinosaur\dino-new.scale-400.png" />
+    <Content Include="Assets\Characters\Gifs\Dinosaur\dino.scale-150.png" />
+    <Content Include="Assets\Characters\Gifs\Dinosaur\dino.scale-400.png" />
+    <Content Include="Assets\Characters\Gifs\Dog\Dead.gif" />
+    <Content Include="Assets\Characters\Gifs\Dog\Jump.gif" />
+    <Content Include="Assets\Characters\Gifs\Dog\Run.gif" />
+    <Content Include="Assets\HelpPageContent.png" />
+    <Content Include="Assets\Icons\ChangePassword.png" />
     <Content Include="Assets\Icons\Coin.gif" />
     <Content Include="Assets\Characters\Gifs\Dinosaur\dead.gif" />
     <Content Include="Assets\Characters\Gifs\Dinosaur\DinoIdle.gif" />
@@ -195,6 +202,7 @@
     <Content Include="Assets\Icons\heart1.gif" />
     <Content Include="Assets\Icons\HelpButton.png" />
     <Content Include="Assets\Icons\login.png" />
+    <Content Include="Assets\Icons\Logout.png" />
     <Content Include="Assets\Icons\musicNote.png" />
     <Content Include="Assets\Icons\playButton.png" />
     <Content Include="Assets\Icons\Settings.png" />
@@ -205,12 +213,12 @@
     <Content Include="Assets\kahoot.mp3" />
     <Content Include="Assets\Login-Page.png" />
     <Content Include="Assets\loginPage.png" />
+    <Content Include="Assets\loser.m4a" />
     <Content Include="Assets\Obstacle\OrangeWall.png" />
     <Content Include="Assets\Obstacle\sign.png" />
     <Content Include="Assets\Obstacle\Wall-new.png" />
     <Content Include="Assets\Obstacle\Wall.png" />
     <Content Include="Assets\Obstacle\WhiteWall.png" />
-    <Content Include="Assets\PaintBrush.png" />
     <Content Include="Assets\RegisterPage.png" />
     <Content Include="Assets\Submit.png" />
     <Content Include="Assets\Welcome.png" />
@@ -265,6 +273,12 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.12</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataBaseProject\DataBaseProject.csproj">
+      <Project>{1df4a240-6535-4590-b187-7217c2737470}</Project>
+      <Name>DataBaseProject</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

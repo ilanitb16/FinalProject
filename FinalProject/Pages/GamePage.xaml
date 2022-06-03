@@ -5,20 +5,28 @@
     xmlns:local="using:FinalProject.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Loaded="Page_Loaded" > 
+    mc:Ignorable="d" Loaded="Page_Loaded" >
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Viewbox Grid.Row="0" Grid.Column="0" Grid.RowSpan="1">
+            <StackPanel Height="1400" Width="1400" Background="Blue">
+                <MediaElement x:Name="mediaPlayer" 
+                  AreTransportControlsEnabled="True" 
+                          Width="10"
+                  Source="../Assets/kahoot.mp3"/>
+            </StackPanel>
+        </Viewbox>
+        <Canvas x:Name="arena">
+            <Button x:Name="BackButton"
+                    Content="BACK" FontSize="50" Click="BackButton_Click" Canvas.Left="39" Canvas.Top="705" RequestedTheme="Dark" Canvas.ZIndex="100" RenderTransformOrigin="0.433,-0.358"/>
 
+            
+            <Canvas.Background>
+                <ImageBrush Stretch="Fill"  ImageSource="/../Assets/Backgrounds/bg2.jpg"/>
 
-    <Canvas x:Name="arena" >
-        
-        <Canvas.Background>
-            <ImageBrush Stretch="Fill"  ImageSource="/../Assets/Backgrounds/bg2.jpg"/>
-           
-            <!--הרקע של הקנבאס-->
-        </Canvas.Background>
-
-        <Viewbox Grid.Row="4" Grid.Column="0"/>
-        <TextBlock x:Name="scoreLable" FontSize="25"></TextBlock>
-        <Button x:Name="BackButton"
-                    Content="BACK" FontSize="50" Click="BackButton_Click" Canvas.Left="15" Canvas.Top="899"/>
-    </Canvas>
+                <!--הרקע של הקנבאס-->
+            </Canvas.Background>
+            <!--השמת רקע ברירת מחדל-->
+        </Canvas>
+    </Grid>
+    
 </Page>

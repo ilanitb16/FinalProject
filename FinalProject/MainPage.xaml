@@ -5,7 +5,7 @@
     xmlns:local="using:FinalProject"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
+    mc:Ignorable="d" Loaded="Page_Loaded"
     Background="DarkSalmon">
 
 
@@ -30,7 +30,7 @@
 
         <Viewbox Grid.Row="1" Grid.Column="1" Grid.RowSpan="1">
             <Button x:Name="PlayButton" BorderBrush="#21798d" BorderThickness="0" 
-                    HorizontalAlignment="Center" Width="50" Height="50" Click="PlayButton_Click">
+                    HorizontalAlignment="Center" Width="50" Height="50" IsEnabled="False" Click="PlayButton_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/Icons/playButton.png" Stretch="Fill" />
                 </Button.Background>
@@ -57,35 +57,19 @@
 
         <Viewbox Grid.Row="1" Grid.Column="0" Grid.RowSpan="1">
             <Button x:Name="StoreButton" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-                    FontSize="50" Width="50" Height="50" Click="StoreButton_Click" BorderBrush="#21798d" BorderThickness="0">
+                    FontSize="50" Width="50" Height="50" Click="StoreButton_Click" BorderBrush="#21798d" IsEnabled="False" BorderThickness="0">
                 <Button.Background>
                     <ImageBrush ImageSource="assets/Icons/storeButton.png" Stretch="Fill" />
                 </Button.Background>
                 <Button.Content>
                     <Image Source="ms-appx:///Assets/Icons/storeButton.png" Margin="-11,-5,-11,-5" />
                 </Button.Content>
-
-                <!--<Button.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.ThemeDictionaries>
-                            <ResourceDictionary x:Key="Dark">
-                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" />
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" />
-                            </ResourceDictionary>
-                            <ResourceDictionary x:Key="Light">
-                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" />
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" />
-                            </ResourceDictionary>
-                        </ResourceDictionary.ThemeDictionaries>
-                    </ResourceDictionary>
-                </Button.Resources>-->
             </Button>
-
         </Viewbox>
 
         <Viewbox Grid.Row="1" Grid.Column="3" Grid.RowSpan="1">
-            <Button x:Name="HelpButton" VerticalAlignment="Stretch" BorderBrush="#21798d" BorderThickness="0" HorizontalAlignment="Stretch"
-                     FontSize="50" Width="50" Height="50" Click="HelpButton_Click">
+            <Button x:Name="StorageButton" VerticalAlignment="Stretch" BorderBrush="#21798d" BorderThickness="0" HorizontalAlignment="Stretch"
+                     FontSize="50" Width="50" Height="50" IsEnabled="False" Click="StorageButton_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="assets/Icons/helpButton.png" Stretch="Fill" />
                 </Button.Background> 
@@ -114,34 +98,32 @@
 
         <Viewbox Grid.Row="2" Grid.RowSpan="1" Grid.Column="2" >
             <Button x:Name="LoginButton" VerticalAlignment="Stretch" BorderBrush="#21798d" BorderThickness="0" HorizontalAlignment="Stretch"
-                     FontSize="50" Width="70" Height="50" Click="LoginButton_Click">
+                     FontSize="50" Width="70" Height="50" IsEnabled="True" Click="LoginButton_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="assets/Icons/login.png" Stretch="Fill" />
                 </Button.Background>
                 <Button.Content>
                     <Image Source="ms-appx:///Assets/Icons/login.png" Margin="-11,-5,-11,-5" />
                 </Button.Content>
+            </Button>
+        </Viewbox>
 
-                <!--<Button.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.ThemeDictionaries>
-                            <ResourceDictionary x:Key="Dark">
-                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" />
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" />
-                            </ResourceDictionary>
-                            <ResourceDictionary x:Key="Light">
-                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" />
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" />
-                            </ResourceDictionary>
-                        </ResourceDictionary.ThemeDictionaries>
-                    </ResourceDictionary>
-                </Button.Resources>-->
+        <Viewbox Grid.Row="2" Grid.RowSpan="1" Grid.Column="2" >
+            <Button x:Name="LogoutButton" VerticalAlignment="Stretch" BorderBrush="#21798d" BorderThickness="0" HorizontalAlignment="Stretch"
+                     FontSize="50" Width="50" Height="50" Visibility="Collapsed" IsEnabled="False" Click="LogoutButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="assets/Icons/Logout.png"  />
+                </Button.Background>
+                <Button.Content>
+                    <Image Source="ms-appx:///Assets/Icons/Logout.png" Margin="-11,-5,-11,-5" />
+                </Button.Content>
+
             </Button>
         </Viewbox>
 
         <Viewbox Grid.Row="2" Grid.RowSpan="1" Grid.Column="1">
             <Button x:Name="SettingsButton" VerticalAlignment="Stretch" Click="SettingsButton_Click" BorderBrush="#21798d" BorderThickness="0" HorizontalAlignment="Stretch"
-                     FontSize="50" Width="50" Height="50" >
+                     FontSize="50" Width="50" Height="50" IsEnabled="False">
                 <Button.Background>
                     <ImageBrush ImageSource="assets/Icons/settings.png"  />
                 </Button.Background>
@@ -194,7 +176,7 @@
             </Button>-->
             
             <Button x:Name="RecordButton" VerticalAlignment="Stretch" Click="RecordButton_Click" BorderBrush="#21798d" BorderThickness="0" HorizontalAlignment="Stretch"
-                     FontSize="50" Width="50" Height="50" >
+                     FontSize="50" Width="50" Height="50" IsEnabled="False">
                 <Button.Background>
                     <ImageBrush ImageSource="assets/Icons/trophy.png"  />
                 </Button.Background>

@@ -5,8 +5,8 @@
     xmlns:local="using:FinalProject.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d" 
+    Background="black">
 
     <Grid>
         <Grid.Background>
@@ -28,7 +28,7 @@
         </Grid.RowDefinitions>
 
         <Viewbox Grid.Row="1" Grid.Column="1" Grid.RowSpan="1">
-            <Button x:ConnectionId='9' x:Name="PlayButton" BorderBrush="#21798d" BorderThickness="0" 
+            <Button x:ConnectionId='10' x:Name="PlayButton" BorderBrush="#21798d" BorderThickness="0" 
                     HorizontalAlignment="Center" Width="50" Height="50"                         >
                 <Button.Background>
                     <ImageBrush ImageSource="..///Assets/Icons/playButton.png" Stretch="Fill" />
@@ -55,7 +55,7 @@
         </Viewbox>
 
         <Viewbox Grid.Row="1" Grid.Column="0" Grid.RowSpan="1">
-            <Button x:ConnectionId='8' x:Name="soundButton" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+            <Button x:ConnectionId='9' x:Name="soundButton" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
                     FontSize="50" Width="50" Height="50"                           BorderBrush="#21798d" BorderThickness="0" >
                 <Button.Background>
                     <ImageBrush ImageSource="..//assets/Icons/SoundPng.png" Stretch="Fill" />
@@ -82,14 +82,68 @@
         </Viewbox>
 
 
-        <Viewbox Grid.Row="1" Grid.Column="3" Grid.RowSpan="1">
-            <Button x:ConnectionId='7' x:Name="musicButton" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-                    FontSize="50" Width="50" Height="50"                           BorderBrush="#21798d" BorderThickness="0">
+        <Viewbox Grid.Row="1" Grid.Column="0" Grid.RowSpan="1">
+            <Button x:ConnectionId='8' x:Name="muteSoundButton" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                    FontSize="50" Width="50" Height="50"                               IsEnabled="False" Visibility="Collapsed" BorderBrush="#21798d" BorderThickness="0" >
+                <Button.Background>
+                    <ImageBrush ImageSource="..//assets/Icons/SoundOff.png" Stretch="Fill" />
+                </Button.Background>
+                <Button.Content>
+                    <Image Source="ms-appx:///Assets/Icons/SoundOff.png" Margin="-11,-5,-11,-5" />
+                </Button.Content>
+
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" />
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" />
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" />
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" />
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
+            </Button>
+        </Viewbox>
+        
+        <!--<Viewbox Grid.Row="1" Grid.Column="3" Grid.RowSpan="1">
+            <Button x:Name="musicButton" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                    FontSize="50" Width="50" Height="50" Click="musicButton_Click" BorderBrush="#21798d" BorderThickness="0">
                 <Button.Background>
                     <ImageBrush ImageSource="..//assets/Icons/musicNote.png" Stretch="Fill" />
                 </Button.Background>
                 <Button.Content>
                     <Image Source="ms-appx:///Assets/Icons/musicNote.png" Margin="-11,-5,-11,-5" />
+                </Button.Content>
+
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" />
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" />
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" />
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" />
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
+            </Button>
+        </Viewbox>-->
+
+        <Viewbox Grid.Row="1" Grid.Column="3">
+            <Button x:ConnectionId='7' x:Name="ChangePassword" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                    FontSize="50" Width="100" Height="100"                              BorderBrush="#21798d" BorderThickness="0">
+                <Button.Background>
+                    <ImageBrush ImageSource="..//assets/Icons/ChangePassword.png" Stretch="Fill" />
+                </Button.Background>
+                <Button.Content>
+                    <Image Source="ms-appx:///Assets/Icons/ChangePassword.png" Margin="-8,-8,-8,-9"  />
                 </Button.Content>
 
                 <Button.Resources>

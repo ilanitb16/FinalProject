@@ -28,8 +28,29 @@
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\bin\x86\Debug\FinalProject.exe">
       <PackagePath>entrypoint\FinalProject.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\.nuget\packages\microsoft.data.sqlite.core\6.0.1\lib\netstandard2.0\Microsoft.Data.Sqlite.dll">
+      <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\.nuget\packages\sqlitepclraw.bundle_e_sqlite3\2.0.6\lib\netstandard2.0\SQLitePCLRaw.batteries_v2.dll">
+      <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\.nuget\packages\sqlitepclraw.core\2.0.6\lib\netstandard2.0\SQLitePCLRaw.core.dll">
+      <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.0.6\runtimes\win10-x86\nativeassets\uap10.0\e_sqlite3.dll">
+      <PackagePath>e_sqlite3.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\.nuget\packages\sqlitepclraw.provider.e_sqlite3\2.0.6\lib\uap10.0\SQLitePCLRaw.provider.e_sqlite3.dll">
+      <PackagePath>SQLitePCLRaw.provider.e_sqlite3.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\.nuget\packages\system.runtime.compilerservices.unsafe\4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+      <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\DataBaseProject\bin\x86\Debug\DataBaseProject.dll">
+      <PackagePath>DataBaseProject.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -51,6 +72,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Characters\Gifs\Cat\WalkingCat.gif">
       <PackagePath>Assets\Characters\Gifs\Cat\WalkingCat.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Characters\Gifs\Dog\Dead.gif">
+      <PackagePath>Assets\Characters\Gifs\Dog\Dead.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Characters\Gifs\Dog\Jump.gif">
+      <PackagePath>Assets\Characters\Gifs\Dog\Jump.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Characters\Gifs\Dog\Run.gif">
+      <PackagePath>Assets\Characters\Gifs\Dog\Run.gif</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Icons\Coin.gif">
       <PackagePath>Assets\Icons\Coin.gif</PackagePath>
@@ -109,8 +139,8 @@
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Backgrounds\OptionsBg.jpg">
       <PackagePath>Assets\Backgrounds\OptionsBg.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Backgrounds\RecordsBg.jpeg">
-      <PackagePath>Assets\Backgrounds\RecordsBg.jpeg</PackagePath>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Backgrounds\Records.png">
+      <PackagePath>Assets\Backgrounds\Records.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Backgrounds\snow.png">
       <PackagePath>Assets\Backgrounds\snow.png</PackagePath>
@@ -118,8 +148,23 @@
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Backgrounds\snowbg.png">
       <PackagePath>Assets\Backgrounds\snowbg.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Characters\Gifs\Dinosaur\dino.png">
-      <PackagePath>Assets\Characters\Gifs\Dinosaur\dino.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Characters\Gifs\Dinosaur\dino-new.scale-400.png">
+      <PackagePath>Assets\Characters\Gifs\Dinosaur\dino-new.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Characters\Gifs\Dinosaur\dino.scale-150.png">
+      <PackagePath>Assets\Characters\Gifs\Dinosaur\dino.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Characters\Gifs\Dinosaur\dino.scale-400.png">
+      <PackagePath>Assets\Characters\Gifs\Dinosaur\dino.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\HelpPageContent.png">
+      <PackagePath>Assets\HelpPageContent.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Icons\ChangePassword.png">
+      <PackagePath>Assets\Icons\ChangePassword.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Coin.png">
       <PackagePath>Assets\Coin.png</PackagePath>
@@ -132,6 +177,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Icons\login.png">
       <PackagePath>Assets\Icons\login.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Icons\Logout.png">
+      <PackagePath>Assets\Icons\Logout.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Icons\musicNote.png">
       <PackagePath>Assets\Icons\musicNote.png</PackagePath>
@@ -175,9 +223,6 @@
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Obstacle\WhiteWall.png">
       <PackagePath>Assets\Obstacle\WhiteWall.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\PaintBrush.png">
-      <PackagePath>Assets\PaintBrush.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\RegisterPage.png">
       <PackagePath>Assets\RegisterPage.png</PackagePath>
     </AppxPackagedFile>
@@ -192,30 +237,30 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\Backgrounds\RecordsBg.jpeg">
+      <PackagePath>Assets\Backgrounds\RecordsBg.jpeg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\kahoot.mp3">
       <PackagePath>Assets\kahoot.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Assets\loser.m4a">
+      <PackagePath>Assets\loser.m4a</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>

@@ -1,1 +1,2 @@
+C:\Users\ilani\Documents\School\2022\FinalProject\DataBaseProject\DataBaseProject.csproj;x86
 C:\Users\ilani\Documents\School\2022\FinalProject\FinalProject\FinalProject.csproj;x86

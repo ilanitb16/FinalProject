@@ -17,7 +17,7 @@ namespace FinalProject.Classes
         
         public OneShow(double placeX, Canvas arena, double width, double height, string fileName) //פעולה בונה שיוצרת את הרקע
         {
-            this.PlaceX = placeX;
+            this.PlaceX = placeX; 
             this.Image = new Image();
             this.Image.Width = width;
             this.Image.Height = height;
@@ -25,10 +25,10 @@ namespace FinalProject.Classes
             this.SpeedX =-5;
             this.Image.Source = new BitmapImage(new Uri("ms-appx:///Assets/Backgrounds/" + fileName));
 
-            Canvas.SetLeft(this.Image, this.PlaceX);
-            Canvas.SetTop(this.Image, this.PlaceY);
+            Canvas.SetLeft(this.Image, this.PlaceX); // מיקום הרקע
+            Canvas.SetTop(this.Image, this.PlaceY); // מיקום הרקע
 
-            this.arena.Children.Add(this.Image);
+            this.arena.Children.Add(this.Image); // הוספת הרקע לקנבס
         }
     }
 }

@@ -58,7 +58,7 @@
 
         <!--שלושת הכפתורים למטה:-->
         <Viewbox Grid.Row="8" Grid.Column="1">
-            <Button x:ConnectionId='9' CornerRadius="20" x:Name="loginButton" FontFamily="Times new roman" VerticalAlignment="Stretch" BorderThickness="2" BorderBrush="#B0A5FF" HorizontalAlignment="Stretch" Content="SIGN UP!" FontSize="10"                          ></Button>
+            <Button x:ConnectionId='9' CornerRadius="20" x:Name="SignUpButton" FontFamily="Times new roman" VerticalAlignment="Stretch" BorderThickness="2" BorderBrush="#B0A5FF" HorizontalAlignment="Stretch" Content="SIGN UP!" FontSize="10"                           ></Button>
         </Viewbox>
         <Viewbox Grid.Row="9" Grid.Column="2">
             <Button x:ConnectionId='8' x:Name="clearButton" CornerRadius="20" FontFamily="Times New Roman" BorderThickness="2" BorderBrush="#B0A5FF" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Content="CLEAR ALL" FontSize="10"                          ></Button>

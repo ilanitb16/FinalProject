@@ -1,4 +1,5 @@
-﻿using FinalProject.Classes;
+﻿using DataBaseProject.Models;
+using FinalProject.Classes;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,20 +24,44 @@ namespace FinalProject.Pages
     /// </summary>
     public sealed partial class GamePage : Page
     {
+        public User user = null;
         Manager manager;
         public GamePage()
         {
             this.InitializeComponent();
+            BackButton.Visibility = Visibility.Visible;
         }
+       /// <summary>
+       /// מקשר בין התוכן של המנגר לפעולת המשחק
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="e"></param>
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            this.manager = new Manager(arena);
-            
+            this.manager = new Manager(arena,this.user, mediaPlayer);   
         }
-
-        private void BackButton_Click(object sender, RoutedEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e) 
         {
-            Frame.Navigate(typeof(MainPage));
+            if (e.Parameter != null && e.Parameter.ToString() != "")
+            {
+                this.user = (User)e.Parameter; // קבלת משתמש
+            }
+        }
+        private void BackButton_Click(object sender, RoutedEventArgs e) //לחיצה על הכפתור "חזרה לאחור" מחזירה לדף הראשי
+        {
+         Frame.Navigate(typeof(MainPage), this.user);
+        }
+        private void PlaySound(string FilePath)
+        {
+            
+            //MediaElement PlayMusic = new MediaElement(); 
+            //StorageFolder Folder = Windows.ApplicationModel.Package.Current.InstalledLocation;
+            //Folder = await Folder.GetFolderAsync("Assets");
+            ////StorageFile sf = await Folder.GetFileAsync(FilePath);
+            ////PlayMusic.SetSource(await sf.OpenAsync(FileAccessMode.Read), sf.ContentType);
+            //GlobalData.player.Play();
+            
+
         }
     }
 }

@@ -20,10 +20,7 @@ namespace FinalProject.Classes
             if (bg == "Wall")
                 image.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri("ms-appx:///Assets/Obstacle/WhiteWall.png"));
             
-
-
-            //image.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri("ms-appx:///Assets/Obstacle/Wall-new.png"));
-            base.type = bg;
+            base.type = bg;  // סוג הדמות: מכשול
         }
     }
 }

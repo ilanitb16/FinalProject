@@ -54,10 +54,17 @@ namespace FinalProject.Classes
         /// </summary>
         internal void Die() // מה שתמרחש כאשר המשחק נגמר 
         {
+            if (this.position.Y <= 0.7 * arena.ActualHeight) // הגדרת "רצפה" כלומר הדמות לא יכולה לרדת מתחת לרף שהוגדר
+            {
+                this.speedY = 0;
+                this.speedX = 0;
+                this.acceleration = 0;
+                this.position.Y = 0.7 * arena.ActualHeight;
+                Canvas.SetTop(this.image, this.position.Y);
+            }
+
             this.state = StateType.dead;
             MatchGif();
-            //this.position.Y = 0.705 * arena.ActualHeight;
-            //this.speedX = 0;
 
         }
         /// <summary>

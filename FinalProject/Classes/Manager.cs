@@ -47,11 +47,14 @@ namespace FinalProject.Classes
         int coinCounter = 0; // מונה המטבעות
         int repeat = 2; // משתנה שמאפשר להוסיף רק עוד שני חיים במידת הצורך, כדי שהמשחק לא יימשך לנצח
 
-        public Manager(Canvas arena, User user)
+        public MediaElement player; //פללייר
+        public bool isGameOver = false; //האם המשחק נגמר
+        public Manager(Canvas arena, User user, MediaElement player)
         {
             this.arena = arena;
             this.user = user;
-            
+            this.player = player;
+
             background = new Background(GlobalData.BackgroundFileName, arena, speed); //יצירת רקע
 
             this.character = new Character(0.3*arena.ActualWidth, 0.7*arena.ActualHeight, arena,150,150); //יצירת הדמות והצגתה על המסך
@@ -91,6 +94,10 @@ namespace FinalProject.Classes
             this.backgroundTimer.Start();
             this.backgroundTimer.Interval = TimeSpan.FromMilliseconds(15);
             this.backgroundTimer.Tick += BackgroundTimer_Tick;
+
+            if (!GlobalData.sound)
+                player.Stop();
+
         }
 
         //private  void OnNavigatedTo(NavigationEventArgs e)
@@ -100,8 +107,19 @@ namespace FinalProject.Classes
         //        this.user = (User)e.Parameter; // קבלת משתמש
         //    }
         //}
-
-
+        private async void PlaySound(string FilePath)
+        {
+            player.Stop();
+            MediaElement PlayMusic = new MediaElement();
+            StorageFolder Folder = Windows.ApplicationModel.Package.Current.InstalledLocation;
+            Folder = await Folder.GetFolderAsync("Assets");
+            StorageFile sf = await Folder.GetFileAsync(FilePath);
+            PlayMusic.SetSource(await sf.OpenAsync(FileAccessMode.Read), sf.ContentType);
+            player.Play();
+        }
+        /// <summary>
+        /// מוסיפה 3 לבבות לרשימה המייצגת את כמות החיים שברשותו של השחקן
+        /// </summary>
         private void InitHearts() // מוסיפה 3 לבבות לרשימה המייצגת את כמות החיים שברשותו של השחקן
         {
             for (int i = 0; i < 3; i++)
@@ -125,6 +143,11 @@ namespace FinalProject.Classes
                 i++;
             }
         }
+        /// <summary>
+        /// /טיימר שאחראי על הזזת הלבבות הניתנים לתפיסה
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HeartTimer_Tick(object sender, object e) //טיימר שאחראי על הזזת הלבבות הניתנים לתפיסה
         {
             Heart removeHeart = null; // הלב שנסיר ממערך העזר ונכניס למערך החיים הקיימים במידה וייתפס
@@ -169,20 +192,11 @@ namespace FinalProject.Classes
 
             if(lives.Count == 0)
             {
-                DataBaseMethods.UpdateCoins(user);
-                user.Score += score;
-                
-                DataBaseMethods.UpdateScore(user);
-                this.character.Die();
-                this.character.moveTimer.Stop();
+                GameOver();
+                isGameOver = true;
 
-                this.heartTimer.Stop();
-                this.renderTimer.Stop();
-                this.generatorTimer.Stop();
-                this.backgroundTimer.Stop();
-                this.background.Speed = 0;
-
-                PlaySound("loser.m4a");
+                if(GlobalData.sound)
+                    PlaySound("loser.m4a");
 
                 StackPanel panel = new StackPanel // פאנל שיכיל את הכל
                 {
@@ -190,7 +204,7 @@ namespace FinalProject.Classes
                 };
                 panel.Orientation = Orientation.Vertical;
 
-                ContentDialog EndGamePopUp = new ContentDialog() // פופ אפ עובר סיסמה ראשונה
+                ContentDialog EndGamePopUp = new ContentDialog() 
                 {
                     Title = "GAME OVER!!",
                     Background = new SolidColorBrush(Colors.Gray),
@@ -203,6 +217,11 @@ namespace FinalProject.Classes
                 await EndGamePopUp.ShowAsync();
             }
         }
+        /// <summary>
+        /// בצע בדיקה על כמות החיים שנותרה ואם השחקן חורג ממנה, המשחק נגמר
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void generatorTimer_Tick(object sender, object e) //פעולה שיוצרת מכשול ומוסיפה אותו לרשימת המכשולים
         {
             string bg; // מחרוזת שתאפשר בחירת רקע רנדומלי ממבחר המכשולים האפשריים
@@ -238,6 +257,11 @@ namespace FinalProject.Classes
 
             this.generatorTimer.Interval = TimeSpan.FromMilliseconds(nextTimeout); // הפעלת הטיימר מחדש
         }
+        /// <summary>
+        /// הפעולה עוברת על מערך המכשולים ומזיזה אותם על המסך
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void renderTimer_Tick(object sender, object e) //הפעולה עוברת על מערך המכשולים ומזיזה אותם על המסך
         {
             BaseClass removeObstacle = null; 
@@ -281,7 +305,6 @@ namespace FinalProject.Classes
                         }
                     }
                 }
-
             }
 
             obstacleList.Remove(removeObstacle); // מחיקת המכשול מהרשימה לאחר שיצא מהמסך
@@ -309,13 +332,6 @@ namespace FinalProject.Classes
                     coinTextBox.Text = "coins: " + coinCounter;
                     user.Coins++;
                 }
-
-                //if(isIntersectCoin && coin.position.X + coin.size.Width < character.position.X + character.size.Width && coin.CountJump) // אם הדמות עברה את המטבע
-                //{
-                //    coin.CountJump = false;
-                //    coinCounter += 1;
-                //    coinTextBox.Text = "coins: " + coinCounter;
-                //}
             }
 
             coinlist.Remove(removeCoin); // הסרת המטבע מרשימת המטבעות
@@ -365,5 +381,29 @@ namespace FinalProject.Classes
                 this.character.Jump();
             }
         }
+        /// <summary>
+        /// פעולה שאחראיצ על סיום המשחק
+        /// </summary>
+        public void GameOver()
+        {
+            DataBaseMethods.UpdateCoins(user);
+            user.Score += score;
+            DataBaseMethods.UpdateScore(user);
+
+            this.character.Die();
+            this.character.moveTimer.Stop();
+
+            this.heartTimer.Stop();
+            this.renderTimer.Stop();
+            this.generatorTimer.Stop();
+            this.backgroundTimer.Stop();
+            this.background.Speed = 0;
+            player.Stop();
+        }
+        /// <summary>
+        /// מחזיר את המשתמש חזרה לדף הראשי
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
     }
 }

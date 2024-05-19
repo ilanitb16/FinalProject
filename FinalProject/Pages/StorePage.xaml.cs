@@ -287,7 +287,7 @@ namespace FinalProject.Pages
                     user.CurrentCharacter = 3;
                     Cat_buy.Content = "use";
                     GlobalData.CharacterRun = "ms-appx:///Assets/Characters/Gifs/Cat/RunningCat.gif";
-                    GlobalData.CharacterJump = "ms-appx:///Assets/Characters/Gifs/Cat/Jumping.gif";
+                    GlobalData.CharacterJump = "ms-appx:///Assets/Characters/Gifs/Cat/JumpingCat.gif";
                     GlobalData.CharacterIdle = "ms-appx:///Assets/Characters/Gifs/Cat/IdleCat.gif";
                     GlobalData.CharacterDead = "ms-appx:///Assets/Characters/Gifs/Cat/DeadCat.gif";
                 }
@@ -300,7 +300,7 @@ namespace FinalProject.Pages
             else
             {
                 GlobalData.CharacterRun = "ms-appx:///Assets/Characters/Gifs/Cat/RunningCat.gif";
-                GlobalData.CharacterJump = "ms-appx:///Assets/Characters/Gifs/Cat/Jumping.gif";
+                GlobalData.CharacterJump = "ms-appx:///Assets/Characters/Gifs/Cat/JumpingCat.gif";
                 GlobalData.CharacterIdle = "ms-appx:///Assets/Characters/Gifs/Cat/IdleCat.gif";
                 GlobalData.CharacterDead = "ms-appx:///Assets/Characters/Gifs/Cat/DeadCat.gif";
             }
@@ -314,13 +314,6 @@ namespace FinalProject.Pages
                 user.Coins -= 0;
             }
             GlobalData.BackgroundFileName = "bg2.jpg";
-        }
-        private void backgound2_buy_Click(object sender, RoutedEventArgs e)
-        {
-        }
-        private void backgound3_buy_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

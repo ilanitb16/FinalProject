@@ -245,7 +245,6 @@ namespace DataBaseProject
         /// פעולה שמעדכנת את המטבעות של המשתמש
         /// </summary>
         /// <param name="user">משתמש</param>
-
         public static void UpdateCoins( User user) 
         {
             string query = $"UPDATE [Users] SET Coins = {user.Coins} WHERE Id = {user.Id}" ;

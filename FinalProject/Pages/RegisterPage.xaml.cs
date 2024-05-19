@@ -84,7 +84,7 @@ namespace FinalProject.Pages
        /// <param name="e"></param>
         private async void SignUpButton_Click(object sender, RoutedEventArgs e)
         {
-            if (UserName.Text != "" && Gamil.Text != "" && Password.Password != "" && confirmPassword.Password != "" && Gamil.ToString().Contains('@')) // אם השדות אינם רקים
+            if (UserName.Text != "" && Gamil.Text != "" && Password.Password != "" && confirmPassword.Password != "" && !Gamil.Text.Contains('!')) // אם השדות אינם רקים
             {
                 if (Password.Password.Equals(confirmPassword.Password) == true) // השוואה האם הסיסמאות שהוזנו זהות
                 {
@@ -123,14 +123,14 @@ namespace FinalProject.Pages
                 dialog.Commands.Add(new UICommand { Label = "OK", Id = 0 });
                 await dialog.ShowAsync();
             }
-
-            if (!Gamil.ToString().Contains('@'))
+            if (Gamil.Text.Contains('!'))
             {
-                var dialog = new MessageDialog("Gmail Address must contain @");
+                var dialog = new MessageDialog("Gmail Address can't contain !");
                 dialog.Title = "System notice";
                 dialog.Commands.Add(new UICommand { Label = "Ok", Id = 0 });
                 await dialog.ShowAsync();
             }
+
         } //מבצעת ולידציה, אם היוזר מתאים אז הוא נוסף לדטה בייז
     }
 }

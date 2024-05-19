@@ -21,7 +21,5 @@ namespace FinalProject.Classes
         public static string BackgroundFileName = "bg2.jpg"; // קישור לרקע ברירת מחדש
 
         public static bool sound = true; // הסאונד- אוטומטית  מופעל
-
-        public static MediaElement player = null;
     }
 }

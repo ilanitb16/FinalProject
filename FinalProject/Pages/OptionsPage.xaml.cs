@@ -46,10 +46,6 @@ namespace FinalProject.Pages
             soundButton.Visibility = Visibility.Collapsed;
 
         }
-        private void musicButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
         protected override void OnNavigatedTo(NavigationEventArgs e) // 
         {
             if (e.Parameter != null && e.Parameter.ToString() != "")
@@ -60,7 +56,22 @@ namespace FinalProject.Pages
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(GamePage), this.user);
-        }  
+        }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            if (!GlobalData.sound) // אם כרגע ערך המשתנה הוא שקר      
+            {
+                muteSoundButton.IsEnabled = true;
+                muteSoundButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                soundButton.IsEnabled = true;
+                soundButton.Visibility = Visibility.Visible;
+                GlobalData.sound = false;
+            }
+        }
         private void HomeButton_Click(Windows.UI.Xaml.Documents.Hyperlink sender, Windows.UI.Xaml.Documents.HyperlinkClickEventArgs args)
         {
             this.Frame.Navigate(typeof(MainPage), this.user);
@@ -97,8 +108,6 @@ namespace FinalProject.Pages
                 FontSize = 15,
                 Foreground = new SolidColorBrush(Colors.Black),
                 PlaceholderText = "Enter old password",
-
-
             };
             var newPassword = new TextBox // תיבת טקסט שתקלוט סיסמה חדשה
             {
@@ -107,8 +116,6 @@ namespace FinalProject.Pages
                 FontSize = 15,
                 Foreground = new SolidColorBrush(Colors.Black),
                 PlaceholderText = "Enter new password",
-
-
             };
             var passBlock = new TextBlock
             {
@@ -162,7 +169,7 @@ namespace FinalProject.Pages
                     string query;
                     query = $"UPDATE [Users] SET Password = '{Password2}' WHERE UserName= '{user.UserName}'"; // עדכון הסיסמה במערכת
                     DataBaseMethods.Execute(query); // המשתמש החדש ברגע זה מתווסף למאגר המשתמשים  הקיימים
-                    ((TextBlock)secondPopUp.Content).Text = "Your password has been successfully changed"; // הצגת הודעה מתאימה
+                    ((TextBlock)secondPopUp.Content).Text = "Your password was updated"; // הצגת הודעה מתאימה
                 }
                 else 
                     ((TextBlock)secondPopUp.Content).Text = "The data you entered is incorrect"; // לא קיים משתמש כזה, הסיסמה שהוזנה לא נכונה
@@ -176,21 +183,47 @@ namespace FinalProject.Pages
         /// <param name="e"></param>
         private void muteSoundButton_Click(object sender, RoutedEventArgs e) // פעולה שאחראית על השתקת הסאונד במשחק
         {
-           // GlobalData.sound = true; // לחיצה פעם ראשונה: יש סאונד
+            // כשהקו האדום על הכפתור הכפתור על מיוט 
 
-            if (!GlobalData.sound)
+            GlobalData.sound = !GlobalData.sound;
+            //soundButton.Visibility = GlobalData.sound ? Visibility.Visible : Visibility.Collapsed;
+            //soundButton.IsEnabled = GlobalData.sound;
+
+            //muteSoundButton.Visibility = GlobalData.sound ? Visibility.Collapsed : Visibility.Visible;
+            //muteSoundButton.IsEnabled = !GlobalData.sound;
+
+
+            if (GlobalData.sound)
             {
-                muteSoundButton.IsEnabled = false; // 
+                soundButton.Visibility = Visibility.Visible;
                 muteSoundButton.Visibility = Visibility.Collapsed;
-                GlobalData.sound = false;
-
+                soundButton.IsEnabled = true;
             }
             else
             {
-                soundButton.IsEnabled = true;
-                soundButton.Visibility = Visibility.Visible;
-                GlobalData.sound = true;
+                soundButton.Visibility = Visibility.Collapsed;
+                muteSoundButton.Visibility = Visibility.Visible;
+                muteSoundButton.IsEnabled = false;
             }
+
+            //if (GlobalData.sound)
+            //    soundButton.IsEnabled = true;
+
+
+
+            //if (!GlobalData.sound) // אם כרגע ערך המשתנה הוא שקר ואנחנו רוצים להפעיל קול חזרה 
+            //{
+            //    muteSoundButton.IsEnabled = false; 
+            //    muteSoundButton.Visibility = Visibility.Collapsed;
+            //    GlobalData.sound = true;
+
+            //}
+            //else
+            //{
+            //    soundButton.IsEnabled = true;
+            //    soundButton.Visibility = Visibility.Visible;
+            //    GlobalData.sound = false;
+            //}
         }
     } 
 }

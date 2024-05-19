@@ -100,7 +100,7 @@
                 </Button.Content>
             </Button>
         </Viewbox>
-        <Button Name="backgound3_buy" Grid.Column="3" Grid.Row="2" CornerRadius="100" FontFamily="Edwardian Script ITC" FontSize="50" Click="backgound3_buy_Click" Content="400" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.RowSpan="2" Margin="0,0,0,226">
+        <Button Name="backgound3_buy" Grid.Column="3" Grid.Row="2" CornerRadius="100" FontFamily="Edwardian Script ITC" FontSize="50" Click="bg3Button_Click" Content="400" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.RowSpan="2" Margin="0,0,0,226">
         </Button>
 
         <Viewbox Grid.Column="2" Grid.Row="2">

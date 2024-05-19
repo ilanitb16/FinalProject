@@ -38,6 +38,8 @@ namespace FinalProject.Pages
        /// <param name="e"></param>
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            mediaPlayer.IsMuted = !GlobalData.sound;
+
             this.manager = new Manager(arena,this.user, mediaPlayer);   
         }
         protected override void OnNavigatedTo(NavigationEventArgs e) 
@@ -47,21 +49,16 @@ namespace FinalProject.Pages
                 this.user = (User)e.Parameter; // קבלת משתמש
             }
         }
+        /// <summary>
+     /// מחזיר את המשתמש חזרה לדף הראשי
+     /// </summary>
+     /// <param name="sender"></param>
+     /// <param name="e"></param>
         private void BackButton_Click(object sender, RoutedEventArgs e) //לחיצה על הכפתור "חזרה לאחור" מחזירה לדף הראשי
         {
-         Frame.Navigate(typeof(MainPage), this.user);
-        }
-        private void PlaySound(string FilePath)
-        {
-            
-            //MediaElement PlayMusic = new MediaElement(); 
-            //StorageFolder Folder = Windows.ApplicationModel.Package.Current.InstalledLocation;
-            //Folder = await Folder.GetFolderAsync("Assets");
-            ////StorageFile sf = await Folder.GetFileAsync(FilePath);
-            ////PlayMusic.SetSource(await sf.OpenAsync(FileAccessMode.Read), sf.ContentType);
-            //GlobalData.player.Play();
-            
-
+            Frame.Navigate(typeof(MainPage), this.user);
+            if(!manager.isGameOver)
+                manager.GameOver();
         }
     }
 }

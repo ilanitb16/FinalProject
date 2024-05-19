@@ -20,8 +20,16 @@ The game starts immediately upon pressing the "Play" button, with the character 
 3. Eun the game.
    
 ## Game Interface
+The game interface includes various pages such as the home page, help page, virtual store, login page, settings, leaderboard page, and more. Each page serves a specific function within the game, facilitating gameplay, customization, and interaction with other players. The screens and instructions are included here.
 
-The game interface includes various pages such as the home page, help page, virtual store, login page, settings, leaderboard page, and more. Each page serves a specific function within the game, facilitating gameplay, customization, and interaction with other players.
+### Opening page
+![image](https://github.com/ilanitb16/FinalProject/assets/97344492/172a62ae-be63-4c62-b644-57a6fc58fb4e)
+![image](https://github.com/ilanitb16/FinalProject/assets/97344492/04b183ae-d8b5-40b5-a206-0176ccaec6ab)
+
+### Login Screen
+![image](https://github.com/ilanitb16/FinalProject/assets/97344492/3a0eb247-ea73-4a1a-91b0-cf1da88344c6)
+![image](https://github.com/ilanitb16/FinalProject/assets/97344492/5f1e9fe5-ca41-4d3a-b525-8259388a58a4)
+
 
 ## Conclusion
 

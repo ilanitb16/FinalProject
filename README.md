@@ -23,7 +23,7 @@ The game starts immediately upon pressing the "Play" button, with the character 
 The game interface includes various pages such as the home page, help page, virtual store, login page, settings, leaderboard page, and more. Each page serves a specific function within the game, facilitating gameplay, customization, and interaction with other players. The screens and instructions are included here.
 
 ### Game Page
-![image](https://github.com/ilanitb16/FinalProject/assets/97344492/8bdfdb56-32d7-4d9b-8b93-ae1a5a73e690)
+![Uploading WhatsApp Image 2024-05-19 at 11.22.04_7a654820.jpg…]()
 ![WhatsApp Image 2024-05-19 at 11 24 48_8cfe6fa3](https://github.com/ilanitb16/FinalProject/assets/97344492/e360761c-acdb-4da5-a98d-993bc6cc61e6)
 ![image](https://github.com/ilanitb16/FinalProject/assets/97344492/2afb047a-c6ad-4363-8e1d-21c5a0086e39)
 
@@ -86,6 +86,32 @@ When the game ends, a notification pops up about it, and the character will stop
 When the user is logged in, on the main page the icon that represented the "login" button changes to log out. Clicking on it disconnects the user. (the icon on the bottom right)
 
 ![image](https://github.com/ilanitb16/FinalProject/assets/97344492/f5e334d3-640b-4364-945d-53e4c905f12f)
+
+### Digital Store
+![image](https://github.com/ilanitb16/FinalProject/assets/97344492/4c080af9-0ade-41a4-b0af-53e3f5a0c8aa)
+![image](https://github.com/ilanitb16/FinalProject/assets/97344492/be2433bf-9ff4-48b7-8991-a51d16a6b8b1)
+
+On this page the user can purchase figures, there are three options for purchase: dog, cat and dinosaur. The characters differ in appearance, so the player can choose the character he likes. In addition to purchasing the characters, there is an option to purchase different backgrounds.
+When the user purchased the character, the caption changes to "use" as in the image above. Otherwise, the price appears. Below is an image of a store for a user who has not purchased characters or backgrounds.
+Above is the amount of coins in the player's possession.
+
+### Help Page
+![image](https://github.com/ilanitb16/FinalProject/assets/97344492/6e7f610e-d996-4a5a-800d-b53ef77397af)
+A page that includes instructions on using the site. The help page can be useful for those who are not familiar with the site and are not sure how to use it properly to suit their needs.
+On the help page you can see explanations under the pictures. The page is actually responsible for explaining the meaning of each button - to which page it leads.
+Compared to other pages, which require login, this page is not locked and access to it is possible even before the user registers. This is to make it easier for the user when using the site.
+At the end of use, you can go back to the main page and log in to continue using the site.
+
+### Options Page
+![image](https://github.com/ilanitb16/FinalProject/assets/97344492/e2b726cd-f6cf-47a4-8009-01bf1ade7b9e)
+![image](https://github.com/ilanitb16/FinalProject/assets/97344492/367aedc0-bce1-4e4b-a758-1a5e15f2371b)
+
+
+### Project Structure
+![image](https://github.com/ilanitb16/FinalProject/assets/97344492/dfb5f94c-1733-4e47-8fa4-725f9e29f2d5)
+![image](https://github.com/ilanitb16/FinalProject/assets/97344492/c00ec20f-90ce-43c4-b79e-e3e6a664b562)
+![image](https://github.com/ilanitb16/FinalProject/assets/97344492/22be0653-ff8b-483d-b555-d1e0681ffddd)
+
 
 ## Conclusion
 

@@ -23,7 +23,7 @@ The game starts immediately upon pressing the "Play" button, with the character 
 The game interface includes various pages such as the home page, help page, virtual store, login page, settings, leaderboard page, and more. Each page serves a specific function within the game, facilitating gameplay, customization, and interaction with other players. The screens and instructions are included here.
 
 ### Game Page
-![Uploading WhatsApp Image 2024-05-19 at 11.22.04_7a654820.jpg…]()
+![WhatsApp Image 2024-05-19 at 11 22 04_7a654820](https://github.com/ilanitb16/FinalProject/assets/97344492/af42d769-b86e-40ba-8f50-bb0063f6a479)
 ![WhatsApp Image 2024-05-19 at 11 24 48_8cfe6fa3](https://github.com/ilanitb16/FinalProject/assets/97344492/e360761c-acdb-4da5-a98d-993bc6cc61e6)
 ![image](https://github.com/ilanitb16/FinalProject/assets/97344492/2afb047a-c6ad-4363-8e1d-21c5a0086e39)
 
